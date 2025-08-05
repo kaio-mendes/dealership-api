@@ -1,0 +1,25 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model cars {
+  id          Int      @id @default(autoincrement())
+  img         String?  @db.VarChar(255)
+  name        String?  @db.VarChar(100)
+  price       Decimal? @db.Decimal(10, 2)
+  description String?  @db.Text
+  featured    Boolean?
+  created_at  DateTime? @default(now())
+  year        Int?
+  transmission String?
+  fuel        String?
+  km          Int?
+  doors       Int?
+  color       String?  @db.VarChar(50)
+  notes       String?  @db.Text
+}

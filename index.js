@@ -5,8 +5,7 @@ import carInformation from "./Routes/public/car-information.js";
 
 const app = express();
 app.use(cors());
-
-app.use(brandRoutes);
+app.use(express.json());
 app.use(carInformation);
 
 app.listen(3000, console.log("rodando"));
