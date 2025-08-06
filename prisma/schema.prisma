@@ -18,6 +18,8 @@ model cars {
   year        Int?
   transmission String?
   fuel        String?
+  brand        String?
+  status        String?
   km          Int?
   doors       Int?
   color       String?  @db.VarChar(50)
